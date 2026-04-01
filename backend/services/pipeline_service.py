@@ -1,24 +1,32 @@
 import os
+import stat
 from analyzers.radon_analyzer import analyze_repo
-from services.analysis_service import analyze_radon_output
+from services.analysis_service import run_static_analysis
+from services.graph_service import build_dependency_graph
 from services.summary_service import build_summary, build_categories
 from analyzers.pip_audit_analyzer import run_pip_audit
 from services.pip_audit_service import analyze_pip_audit_output
 from services.coverage_service import analyze_coverage
 from services.lizard_service import run_lizard   # ✅ NEW
 from services.graph_service import build_repo_graph
+import git
+import shutil
+import uuid
+from services.graph_service import build_dependency_graph
+from services.analysis_service import run_static_analysis
+from services.analysis_service import run_static_analysis
+from services.graph_service import build_dependency_graph
 
 def clone_repo(repo_url: str):
-    repo_name = repo_url.split("/")[-1]
-    clone_path = os.path.join("repos", repo_name)
-
+    # Remove .git if it exists to get the clean folder name
+    repo_name = repo_url.split("/")[-1].replace(".git", "")
+    clone_path = os.path.join("backend", "repos", repo_name)
+    
     if not os.path.exists(clone_path):
-        print("Cloning repo...")
+        print(f"🚀 Cloning {repo_name}...")
         os.system(f"git clone {repo_url} {clone_path}")
-    else:
-        print("Repo already exists.")
-
-    return clone_path
+    
+    return clone_path, repo_name
 
 
 def run_radon(repo_path: str):
@@ -164,3 +172,41 @@ if __name__ == "__main__":
         print(f"❌ PIPELINE CRASHED: {e}")
         import traceback
         traceback.print_exc()
+
+def run_full_analysis(repo_url: str):
+    clone_path, repo_name = clone_repo(repo_url)
+    
+    try:
+        # 1. Build the graph first to get blast radius scores
+        graph_data, blast_scores = build_dependency_graph(clone_path, repo_name)
+        
+        # 2. Run static analysis using those scores
+        analysis_payload = run_static_analysis(clone_path, repo_name, blast_scores)
+        
+        # 3. Return the consolidated "Requests-style" JSON
+        return {
+            "repo_url": repo_url,
+            "summary": analysis_payload["summary"],
+            "issues": analysis_payload["issues"],
+            "heatmap": analysis_payload["heatmap"],
+            "graph": graph_data,
+            "categories": analysis_payload["categories"],
+            "status": "Ready for Fingerprinting"
+        }
+    finally:
+        cleanup_workspace(clone_path)
+
+
+
+def cleanup_workspace(temp_path: str):
+    def readonly_handler(func, path, execinfo):
+        """Force deletes read-only files (common in .git folders)"""
+        os.chmod(path, stat.S_IWRITE)
+        func(path)
+
+    try:
+        if os.path.exists(temp_path):
+            shutil.rmtree(temp_path, onerror=readonly_handler)
+            print(f"🧹 Successfully cleaned up: {temp_path}")
+    except Exception as e:
+        print(f"⚠️ Cleanup failed for {temp_path}: {e}")

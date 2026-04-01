@@ -106,3 +106,90 @@ if __name__ == "__main__":
             
         print("="*40)
         print(f"Total Files Scanned: {len(blast)}")
+
+def build_dependency_graph(repo_path: str, repo_name: str):
+    # This replaces the hardcoded "backend/repos/requests"
+    # It allows the AST parser to walk through any folder you just cloned
+    import_map = {}
+    
+    for root, dirs, files in os.walk(repo_path):
+        for file in files:
+            if file.endswith(".py"):
+                full_path = os.path.join(root, file)
+                # Use your dynamic cleaners here
+                module_name = extract_module(full_path, repo_name)
+                import_map[module_name] = parse_imports(full_path)
+    
+    # Calculate Blast Radius based on this map
+    return calculate_blast_radius(import_map)
+
+def clean_file_path(file_path: str, repo_name: str):
+    """Removes the local temp folder structure to keep paths relative."""
+    search_pattern = f"{repo_name}"
+    if search_pattern in file_path:
+        # Returns everything after the repo name folder
+        return file_path.split(search_pattern)[-1].lstrip("\\/")
+    return file_path
+
+def extract_module(file_path: str, repo_name: str):
+    """Converts a file path into a Python module dot-notation."""
+    search_pattern = f"{repo_name}"
+    if search_pattern in file_path:
+        path = file_path.split(search_pattern)[-1].lstrip("\\/")
+    else:
+        path = file_path
+
+    # Remove .py and swap slashes for dots
+    path = path.replace(".py", "").replace("/", ".").replace("\\", ".")
+    return f"{repo_name}.{path}"
+
+def parse_imports(file_path: str):
+    """
+    Uses AST to extract all 'import' and 'from ... import' 
+    statements from a single Python file.
+    """
+    imports = []
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            tree = ast.parse(f.read())
+            
+        for node in ast.walk(tree):
+            # Handles 'import os'
+            if isinstance(node, ast.Import):
+                for alias in node.names:
+                    imports.append(alias.name)
+            # Handles 'from flask import Flask'
+            elif isinstance(node, ast.ImportFrom):
+                if node.module:
+                    imports.append(node.module)
+                    
+    except Exception as e:
+        print(f"⚠️ Could not parse imports in {file_path}: {e}")
+        
+    return list(set(imports)) # Returns unique imports only
+
+def calculate_blast_radius(import_map: dict):
+    # Count imports to get blast radius
+    blast_radius_scores = {module: 0 for module in import_map.keys()}
+    for imports in import_map.values():
+        for imp in imports:
+            if imp in blast_radius_scores:
+                blast_radius_scores[imp] += 1
+
+    # Format for the "graph" key
+    nodes = []
+    for mod, score in blast_radius_scores.items():
+        nodes.append({
+            "id": mod,
+            "label": mod.split('.')[-1] + ".py",
+            "blast_radius": score,
+            "severity": "high" if score > 15 else "medium" if score > 5 else "low"
+        })
+
+    edges = []
+    for source, imports in import_map.items():
+        for target in imports:
+            if target in blast_radius_scores:
+                edges.append({"source": source, "target": target, "relationship": "imports"})
+
+    return {"nodes": nodes, "edges": edges}, blast_radius_scores

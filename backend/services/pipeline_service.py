@@ -2,6 +2,10 @@ import os
 from analyzers.radon_analyzer import analyze_repo
 from services.analysis_service import analyze_radon_output
 from services.summary_service import build_summary, build_categories
+from analyzers.pip_audit_analyzer import run_pip_audit
+from services.pip_audit_service import analyze_pip_audit_output
+from services.coverage_service import analyze_coverage
+from services.lizard_service import run_lizard   # ✅ NEW
 
 
 def clone_repo(repo_url: str):
@@ -23,17 +27,38 @@ def run_radon(repo_path: str):
     return processed["issues"]
 
 
+def run_pip(repo_path: str):
+    raw = run_pip_audit(repo_path)
+    processed = analyze_pip_audit_output(raw)
+    return processed["issues"]
+
+
+def run_coverage(repo_path: str):
+    processed = analyze_coverage(repo_path)
+    return processed["issues"]
+
+
 def run_pipeline(repo_url: str):
     repo_path = clone_repo(repo_url)
 
-    issues = run_radon(repo_path)
+    radon_issues = run_radon(repo_path)
+    pip_issues = run_pip(repo_path)
+    coverage_issues = run_coverage(repo_path)
+    lizard_issues = run_lizard(repo_path)   # ✅ NEW
 
-    summary = build_summary(issues)
-    categories = build_categories(issues)
+    all_issues = (
+        radon_issues +
+        pip_issues +
+        coverage_issues +
+        lizard_issues
+    )
+
+    summary = build_summary(all_issues)
+    categories = build_categories(all_issues)
 
     return {
         "repo_url": repo_url,
-        "issues": issues,
+        "issues": all_issues,
         "summary": summary,
         "categories": categories
     }

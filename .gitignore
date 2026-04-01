@@ -1,0 +1,25 @@
+# Virtual Environments
+backend/venv/
+venv/
+ENV/
+
+# Python Cache & Compiled Files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Cloned Repos & Large Analysis Data
+backend/repos/
+master_output.json
+
+# IDE / Editor Settings
+.vscode/
+.idea/
+
+# Frontend Dependencies (if applicable)
+node_modules/
+
+# OS Specific Files
+.DS_Store
+Thumbs.db

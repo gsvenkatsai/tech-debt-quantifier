@@ -6,7 +6,7 @@ from analyzers.pip_audit_analyzer import run_pip_audit
 from services.pip_audit_service import analyze_pip_audit_output
 from services.coverage_service import analyze_coverage
 from services.lizard_service import run_lizard   # ✅ NEW
-
+from services.graph_service import build_repo_graph
 
 def clone_repo(repo_url: str):
     repo_name = repo_url.split("/")[-1]
@@ -37,14 +37,27 @@ def run_coverage(repo_path: str):
     processed = analyze_coverage(repo_path)
     return processed["issues"]
 
+def clean_path_for_mapping(raw_path):
+    # Convert backslashes to forward slashes for Windows compatibility
+    normalized = raw_path.replace("\\", "/")
+    
+    # We only want the part of the path starting from 'src' or 'tests'
+    if "src/" in normalized:
+        return "src" + normalized.split("src")[-1]
+    if "tests/" in normalized:
+        return "tests" + normalized.split("tests")[-1]
+    
+    # Fallback: just return the filename if nothing else matches
+    return os.path.basename(normalized)
 
 def run_pipeline(repo_url: str):
     repo_path = clone_repo(repo_url)
 
+    # 1. Run Phase 1 Analyzers
     radon_issues = run_radon(repo_path)
     pip_issues = run_pip(repo_path)
     coverage_issues = run_coverage(repo_path)
-    lizard_issues = run_lizard(repo_path)   # ✅ NEW
+    lizard_issues = run_lizard(repo_path) 
 
     all_issues = (
         radon_issues +
@@ -53,19 +66,101 @@ def run_pipeline(repo_url: str):
         lizard_issues
     )
 
-    summary = build_summary(all_issues)
-    categories = build_categories(all_issues)
+    # 2. Get the Graph Data from Person A's service
+    blast_map, edges = build_repo_graph(repo_path)
+
+    # 3. Enrichment & Heatmap Generation
+    enriched_issues = []
+    heatmap_data = []
+
+    for issue in all_issues:
+        clean_name = clean_path_for_mapping(issue.get("file", ""))
+        
+        # --- FIX FOR RADIUS LIST ERROR ---
+        raw_radius = blast_map.get(clean_name, 0)
+        if isinstance(raw_radius, list):
+            # If it's a list of connections, the "radius" is the number of connections
+            safe_radius = len(raw_radius)
+        else:
+            try:
+                safe_radius = int(raw_radius)
+            except (ValueError, TypeError):
+                safe_radius = 0
+        
+        # --- ULTIMATE SAFETY CHECK FOR VALUE ---
+        raw_val = issue.get("value", 0)
+        
+        if isinstance(raw_val, list):
+            # Take the first number in the list if available
+            val = int(raw_val[0]) if (raw_val and str(raw_val[0]).isdigit()) else 0
+        else:
+            try:
+                val = int(raw_val) if raw_val is not None else 0
+            except (ValueError, TypeError):
+                val = 0
+            
+        # 4. Final Math
+        system_impact = val * safe_radius
+        
+        # Update the issue object with clean data
+        issue["value"] = val 
+        issue["blast_radius"] = safe_radius
+        issue["system_impact_score"] = system_impact
+        issue["clean_path"] = clean_name
+
+        enriched_issues.append(issue)
+
+        heatmap_data.append({
+            "file": clean_name,
+            "x_complexity": val,
+            "y_blast_radius": safe_radius,
+            "z_impact": system_impact
+        })
+
+    # 5. Sort by System Impact Score
+    enriched_issues.sort(key=lambda x: x.get("system_impact_score", 0), reverse=True)
+    
+    # 6. Re-calculate summary based on enriched data
+    summary = build_summary(enriched_issues)
+    categories = build_categories(enriched_issues)
 
     return {
         "repo_url": repo_url,
-        "issues": all_issues,
         "summary": summary,
-        "categories": categories
+        "categories": categories,
+        "top_10_priority": enriched_issues[:10],
+        "all_issues": enriched_issues,
+        "graph": {
+            "nodes": [{"id": k, "label": os.path.basename(k), "blast_radius": (len(v) if isinstance(v, list) else v)} for k, v in blast_map.items()],
+            "edges": edges
+        },
+        "heatmap": heatmap_data
     }
 
-
 if __name__ == "__main__":
-    result = run_pipeline("https://github.com/psf/requests")
-
     import json
-    print(json.dumps(result, indent=2))
+    
+    print("\n🚀 STARTING MASTER PIPELINE ANALYSIS...")
+    target_repo = "https://github.com/psf/requests"
+    
+    try:
+        # 1. Run the full pipeline
+        result = run_pipeline(target_repo)
+        
+        # 2. Define the output filename
+        output_filename = "master_output.json"
+        
+        # 3. SAVE TO FILE
+        with open(output_filename, "w", encoding="utf-8") as f:
+            json.dump(result, f, indent=2)
+            
+        print("\n" + "="*40)
+        print("✅ ANALYSIS COMPLETE!")
+        print(f"📂 Master JSON saved to: {os.path.abspath(output_filename)}")
+        print(f"📊 Total Issues Found: {result['summary']['total_issues']}")
+        print("="*40)
+        
+    except Exception as e:
+        print(f"❌ PIPELINE CRASHED: {e}")
+        import traceback
+        traceback.print_exc()

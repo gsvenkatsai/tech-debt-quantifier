@@ -1,0 +1,4110 @@
+{
+  "repo_url": "https://github.com/psf/requests",
+  "raw": {
+    "radon": {
+      "tool": "radon",
+      "files": [
+        {
+          "file": "repos\\requests\\docs\\_themes\\flask_theme_support.py",
+          "functions": [
+            {
+              "name": "FlaskyStyle",
+              "complexity": 1,
+              "lineno": 7
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\adapters.py",
+          "functions": [
+            {
+              "name": "SOCKSProxyManager",
+              "complexity": 1,
+              "lineno": 63
+            },
+            {
+              "name": "_urllib3_request_context",
+              "complexity": 7,
+              "lineno": 77
+            },
+            {
+              "name": "BaseAdapter",
+              "complexity": 2,
+              "lineno": 114
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 117
+            },
+            {
+              "name": "send",
+              "complexity": 1,
+              "lineno": 120
+            },
+            {
+              "name": "close",
+              "complexity": 1,
+              "lineno": 139
+            },
+            {
+              "name": "HTTPAdapter",
+              "complexity": 5,
+              "lineno": 144
+            },
+            {
+              "name": "__init__",
+              "complexity": 2,
+              "lineno": 179
+            },
+            {
+              "name": "__getstate__",
+              "complexity": 2,
+              "lineno": 201
+            },
+            {
+              "name": "__setstate__",
+              "complexity": 2,
+              "lineno": 204
+            },
+            {
+              "name": "init_poolmanager",
+              "complexity": 1,
+              "lineno": 217
+            },
+            {
+              "name": "proxy_manager_for",
+              "complexity": 3,
+              "lineno": 243
+            },
+            {
+              "name": "cert_verify",
+              "complexity": 14,
+              "lineno": 281
+            },
+            {
+              "name": "build_response",
+              "complexity": 2,
+              "lineno": 337
+            },
+            {
+              "name": "build_connection_pool_key_attributes",
+              "complexity": 1,
+              "lineno": 374
+            },
+            {
+              "name": "get_connection_with_tls_context",
+              "complexity": 4,
+              "lineno": 424
+            },
+            {
+              "name": "get_connection",
+              "complexity": 3,
+              "lineno": 473
+            },
+            {
+              "name": "close",
+              "complexity": 2,
+              "lineno": 514
+            },
+            {
+              "name": "request_url",
+              "complexity": 6,
+              "lineno": 524
+            },
+            {
+              "name": "add_headers",
+              "complexity": 1,
+              "lineno": 556
+            },
+            {
+              "name": "proxy_headers",
+              "complexity": 2,
+              "lineno": 570
+            },
+            {
+              "name": "send",
+              "complexity": 19,
+              "lineno": 591
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\api.py",
+          "functions": [
+            {
+              "name": "request",
+              "complexity": 1,
+              "lineno": 14
+            },
+            {
+              "name": "get",
+              "complexity": 1,
+              "lineno": 62
+            },
+            {
+              "name": "options",
+              "complexity": 1,
+              "lineno": 76
+            },
+            {
+              "name": "head",
+              "complexity": 1,
+              "lineno": 88
+            },
+            {
+              "name": "post",
+              "complexity": 1,
+              "lineno": 103
+            },
+            {
+              "name": "put",
+              "complexity": 1,
+              "lineno": 118
+            },
+            {
+              "name": "patch",
+              "complexity": 1,
+              "lineno": 133
+            },
+            {
+              "name": "delete",
+              "complexity": 1,
+              "lineno": 148
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\auth.py",
+          "functions": [
+            {
+              "name": "_basic_auth_str",
+              "complexity": 5,
+              "lineno": 25
+            },
+            {
+              "name": "AuthBase",
+              "complexity": 2,
+              "lineno": 69
+            },
+            {
+              "name": "__call__",
+              "complexity": 1,
+              "lineno": 72
+            },
+            {
+              "name": "HTTPBasicAuth",
+              "complexity": 2,
+              "lineno": 76
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 79
+            },
+            {
+              "name": "__eq__",
+              "complexity": 1,
+              "lineno": 83
+            },
+            {
+              "name": "__ne__",
+              "complexity": 1,
+              "lineno": 91
+            },
+            {
+              "name": "__call__",
+              "complexity": 1,
+              "lineno": 94
+            },
+            {
+              "name": "HTTPProxyAuth",
+              "complexity": 2,
+              "lineno": 99
+            },
+            {
+              "name": "__call__",
+              "complexity": 1,
+              "lineno": 102
+            },
+            {
+              "name": "HTTPDigestAuth",
+              "complexity": 5,
+              "lineno": 107
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 110
+            },
+            {
+              "name": "init_per_thread_state",
+              "complexity": 2,
+              "lineno": 116
+            },
+            {
+              "name": "build_digest_header",
+              "complexity": 19,
+              "lineno": 126
+            },
+            {
+              "name": "handle_redirect",
+              "complexity": 2,
+              "lineno": 236
+            },
+            {
+              "name": "handle_401",
+              "complexity": 5,
+              "lineno": 241
+            },
+            {
+              "name": "__call__",
+              "complexity": 3,
+              "lineno": 285
+            },
+            {
+              "name": "__eq__",
+              "complexity": 1,
+              "lineno": 305
+            },
+            {
+              "name": "__ne__",
+              "complexity": 1,
+              "lineno": 313
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\compat.py",
+          "functions": [
+            {
+              "name": "_resolve_char_detection",
+              "complexity": 4,
+              "lineno": 30
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\cookies.py",
+          "functions": [
+            {
+              "name": "extract_cookies_to_jar",
+              "complexity": 3,
+              "lineno": 124
+            },
+            {
+              "name": "get_cookie_header",
+              "complexity": 1,
+              "lineno": 140
+            },
+            {
+              "name": "remove_cookie_by_name",
+              "complexity": 8,
+              "lineno": 151
+            },
+            {
+              "name": "_copy_cookie_jar",
+              "complexity": 4,
+              "lineno": 440
+            },
+            {
+              "name": "create_cookie",
+              "complexity": 2,
+              "lineno": 455
+            },
+            {
+              "name": "morsel_to_cookie",
+              "complexity": 5,
+              "lineno": 492
+            },
+            {
+              "name": "cookiejar_from_dict",
+              "complexity": 7,
+              "lineno": 521
+            },
+            {
+              "name": "merge_cookies",
+              "complexity": 6,
+              "lineno": 542
+            },
+            {
+              "name": "MockRequest",
+              "complexity": 2,
+              "lineno": 23
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 35
+            },
+            {
+              "name": "get_type",
+              "complexity": 1,
+              "lineno": 40
+            },
+            {
+              "name": "get_host",
+              "complexity": 1,
+              "lineno": 43
+            },
+            {
+              "name": "get_origin_req_host",
+              "complexity": 1,
+              "lineno": 46
+            },
+            {
+              "name": "get_full_url",
+              "complexity": 2,
+              "lineno": 49
+            },
+            {
+              "name": "is_unverifiable",
+              "complexity": 1,
+              "lineno": 69
+            },
+            {
+              "name": "has_header",
+              "complexity": 2,
+              "lineno": 72
+            },
+            {
+              "name": "get_header",
+              "complexity": 1,
+              "lineno": 75
+            },
+            {
+              "name": "add_header",
+              "complexity": 1,
+              "lineno": 78
+            },
+            {
+              "name": "add_unredirected_header",
+              "complexity": 1,
+              "lineno": 84
+            },
+            {
+              "name": "get_new_headers",
+              "complexity": 1,
+              "lineno": 87
+            },
+            {
+              "name": "unverifiable",
+              "complexity": 1,
+              "lineno": 91
+            },
+            {
+              "name": "origin_req_host",
+              "complexity": 1,
+              "lineno": 95
+            },
+            {
+              "name": "host",
+              "complexity": 1,
+              "lineno": 99
+            },
+            {
+              "name": "MockResponse",
+              "complexity": 2,
+              "lineno": 103
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 110
+            },
+            {
+              "name": "info",
+              "complexity": 1,
+              "lineno": 117
+            },
+            {
+              "name": "getheaders",
+              "complexity": 1,
+              "lineno": 120
+            },
+            {
+              "name": "CookieConflictError",
+              "complexity": 1,
+              "lineno": 170
+            },
+            {
+              "name": "RequestsCookieJar",
+              "complexity": 3,
+              "lineno": 176
+            },
+            {
+              "name": "get",
+              "complexity": 2,
+              "lineno": 194
+            },
+            {
+              "name": "set",
+              "complexity": 3,
+              "lineno": 206
+            },
+            {
+              "name": "iterkeys",
+              "complexity": 2,
+              "lineno": 225
+            },
+            {
+              "name": "keys",
+              "complexity": 1,
+              "lineno": 234
+            },
+            {
+              "name": "itervalues",
+              "complexity": 2,
+              "lineno": 242
+            },
+            {
+              "name": "values",
+              "complexity": 1,
+              "lineno": 251
+            },
+            {
+              "name": "iteritems",
+              "complexity": 2,
+              "lineno": 259
+            },
+            {
+              "name": "items",
+              "complexity": 1,
+              "lineno": 268
+            },
+            {
+              "name": "list_domains",
+              "complexity": 3,
+              "lineno": 277
+            },
+            {
+              "name": "list_paths",
+              "complexity": 3,
+              "lineno": 285
+            },
+            {
+              "name": "multiple_domains",
+              "complexity": 4,
+              "lineno": 293
+            },
+            {
+              "name": "get_dict",
+              "complexity": 6,
+              "lineno": 306
+            },
+            {
+              "name": "__contains__",
+              "complexity": 2,
+              "lineno": 321
+            },
+            {
+              "name": "__getitem__",
+              "complexity": 1,
+              "lineno": 327
+            },
+            {
+              "name": "__setitem__",
+              "complexity": 1,
+              "lineno": 336
+            },
+            {
+              "name": "__delitem__",
+              "complexity": 1,
+              "lineno": 343
+            },
+            {
+              "name": "set_cookie",
+              "complexity": 4,
+              "lineno": 349
+            },
+            {
+              "name": "update",
+              "complexity": 3,
+              "lineno": 358
+            },
+            {
+              "name": "_find",
+              "complexity": 7,
+              "lineno": 366
+            },
+            {
+              "name": "_find_no_duplicates",
+              "complexity": 9,
+              "lineno": 386
+            },
+            {
+              "name": "__getstate__",
+              "complexity": 1,
+              "lineno": 415
+            },
+            {
+              "name": "__setstate__",
+              "complexity": 2,
+              "lineno": 422
+            },
+            {
+              "name": "copy",
+              "complexity": 1,
+              "lineno": 428
+            },
+            {
+              "name": "get_policy",
+              "complexity": 1,
+              "lineno": 435
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\exceptions.py",
+          "functions": [
+            {
+              "name": "RequestException",
+              "complexity": 5,
+              "lineno": 13
+            },
+            {
+              "name": "__init__",
+              "complexity": 4,
+              "lineno": 18
+            },
+            {
+              "name": "InvalidJSONError",
+              "complexity": 1,
+              "lineno": 28
+            },
+            {
+              "name": "JSONDecodeError",
+              "complexity": 2,
+              "lineno": 32
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 35
+            },
+            {
+              "name": "__reduce__",
+              "complexity": 1,
+              "lineno": 45
+            },
+            {
+              "name": "HTTPError",
+              "complexity": 1,
+              "lineno": 56
+            },
+            {
+              "name": "ConnectionError",
+              "complexity": 1,
+              "lineno": 60
+            },
+            {
+              "name": "ProxyError",
+              "complexity": 1,
+              "lineno": 64
+            },
+            {
+              "name": "SSLError",
+              "complexity": 1,
+              "lineno": 68
+            },
+            {
+              "name": "Timeout",
+              "complexity": 1,
+              "lineno": 72
+            },
+            {
+              "name": "ConnectTimeout",
+              "complexity": 1,
+              "lineno": 81
+            },
+            {
+              "name": "ReadTimeout",
+              "complexity": 1,
+              "lineno": 88
+            },
+            {
+              "name": "URLRequired",
+              "complexity": 1,
+              "lineno": 92
+            },
+            {
+              "name": "TooManyRedirects",
+              "complexity": 1,
+              "lineno": 96
+            },
+            {
+              "name": "MissingSchema",
+              "complexity": 1,
+              "lineno": 100
+            },
+            {
+              "name": "InvalidSchema",
+              "complexity": 1,
+              "lineno": 104
+            },
+            {
+              "name": "InvalidURL",
+              "complexity": 1,
+              "lineno": 108
+            },
+            {
+              "name": "InvalidHeader",
+              "complexity": 1,
+              "lineno": 112
+            },
+            {
+              "name": "InvalidProxyURL",
+              "complexity": 1,
+              "lineno": 116
+            },
+            {
+              "name": "ChunkedEncodingError",
+              "complexity": 1,
+              "lineno": 120
+            },
+            {
+              "name": "ContentDecodingError",
+              "complexity": 1,
+              "lineno": 124
+            },
+            {
+              "name": "StreamConsumedError",
+              "complexity": 1,
+              "lineno": 128
+            },
+            {
+              "name": "RetryError",
+              "complexity": 1,
+              "lineno": 132
+            },
+            {
+              "name": "UnrewindableBodyError",
+              "complexity": 1,
+              "lineno": 136
+            },
+            {
+              "name": "RequestsWarning",
+              "complexity": 1,
+              "lineno": 143
+            },
+            {
+              "name": "FileModeWarning",
+              "complexity": 1,
+              "lineno": 147
+            },
+            {
+              "name": "RequestsDependencyWarning",
+              "complexity": 1,
+              "lineno": 151
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\help.py",
+          "functions": [
+            {
+              "name": "_implementation",
+              "complexity": 6,
+              "lineno": 34
+            },
+            {
+              "name": "info",
+              "complexity": 6,
+              "lineno": 66
+            },
+            {
+              "name": "main",
+              "complexity": 1,
+              "lineno": 125
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\hooks.py",
+          "functions": [
+            {
+              "name": "default_hooks",
+              "complexity": 2,
+              "lineno": 16
+            },
+            {
+              "name": "dispatch_hook",
+              "complexity": 6,
+              "lineno": 23
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\models.py",
+          "functions": [
+            {
+              "name": "RequestEncodingMixin",
+              "complexity": 13,
+              "lineno": 86
+            },
+            {
+              "name": "path_url",
+              "complexity": 3,
+              "lineno": 88
+            },
+            {
+              "name": "_encode_params",
+              "complexity": 11,
+              "lineno": 109
+            },
+            {
+              "name": "_encode_files",
+              "complexity": 21,
+              "lineno": 139
+            },
+            {
+              "name": "RequestHooksMixin",
+              "complexity": 5,
+              "lineno": 208
+            },
+            {
+              "name": "register_hook",
+              "complexity": 6,
+              "lineno": 209
+            },
+            {
+              "name": "deregister_hook",
+              "complexity": 2,
+              "lineno": 220
+            },
+            {
+              "name": "Request",
+              "complexity": 4,
+              "lineno": 232
+            },
+            {
+              "name": "__init__",
+              "complexity": 7,
+              "lineno": 260
+            },
+            {
+              "name": "__repr__",
+              "complexity": 1,
+              "lineno": 294
+            },
+            {
+              "name": "prepare",
+              "complexity": 1,
+              "lineno": 297
+            },
+            {
+              "name": "PreparedRequest",
+              "complexity": 5,
+              "lineno": 315
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 336
+            },
+            {
+              "name": "prepare",
+              "complexity": 1,
+              "lineno": 353
+            },
+            {
+              "name": "__repr__",
+              "complexity": 1,
+              "lineno": 381
+            },
+            {
+              "name": "copy",
+              "complexity": 2,
+              "lineno": 384
+            },
+            {
+              "name": "prepare_method",
+              "complexity": 2,
+              "lineno": 395
+            },
+            {
+              "name": "_get_idna_encoded_host",
+              "complexity": 2,
+              "lineno": 402
+            },
+            {
+              "name": "prepare_url",
+              "complexity": 17,
+              "lineno": 411
+            },
+            {
+              "name": "prepare_headers",
+              "complexity": 3,
+              "lineno": 485
+            },
+            {
+              "name": "prepare_body",
+              "complexity": 17,
+              "lineno": 496
+            },
+            {
+              "name": "prepare_content_length",
+              "complexity": 5,
+              "lineno": 574
+            },
+            {
+              "name": "prepare_auth",
+              "complexity": 6,
+              "lineno": 590
+            },
+            {
+              "name": "prepare_cookies",
+              "complexity": 3,
+              "lineno": 612
+            },
+            {
+              "name": "prepare_hooks",
+              "complexity": 3,
+              "lineno": 632
+            },
+            {
+              "name": "Response",
+              "complexity": 4,
+              "lineno": 642
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 660
+            },
+            {
+              "name": "__enter__",
+              "complexity": 1,
+              "lineno": 707
+            },
+            {
+              "name": "__exit__",
+              "complexity": 1,
+              "lineno": 710
+            },
+            {
+              "name": "__getstate__",
+              "complexity": 3,
+              "lineno": 713
+            },
+            {
+              "name": "__setstate__",
+              "complexity": 2,
+              "lineno": 721
+            },
+            {
+              "name": "__repr__",
+              "complexity": 1,
+              "lineno": 729
+            },
+            {
+              "name": "__bool__",
+              "complexity": 1,
+              "lineno": 732
+            },
+            {
+              "name": "__nonzero__",
+              "complexity": 1,
+              "lineno": 742
+            },
+            {
+              "name": "__iter__",
+              "complexity": 1,
+              "lineno": 752
+            },
+            {
+              "name": "ok",
+              "complexity": 2,
+              "lineno": 757
+            },
+            {
+              "name": "is_redirect",
+              "complexity": 2,
+              "lineno": 772
+            },
+            {
+              "name": "is_permanent_redirect",
+              "complexity": 2,
+              "lineno": 779
+            },
+            {
+              "name": "next",
+              "complexity": 1,
+              "lineno": 787
+            },
+            {
+              "name": "apparent_encoding",
+              "complexity": 2,
+              "lineno": 792
+            },
+            {
+              "name": "iter_content",
+              "complexity": 7,
+              "lineno": 801
+            },
+            {
+              "name": "iter_lines",
+              "complexity": 9,
+              "lineno": 859
+            },
+            {
+              "name": "content",
+              "complexity": 6,
+              "lineno": 893
+            },
+            {
+              "name": "text",
+              "complexity": 4,
+              "lineno": 912
+            },
+            {
+              "name": "json",
+              "complexity": 8,
+              "lineno": 949
+            },
+            {
+              "name": "links",
+              "complexity": 4,
+              "lineno": 985
+            },
+            {
+              "name": "raise_for_status",
+              "complexity": 6,
+              "lineno": 1001
+            },
+            {
+              "name": "close",
+              "complexity": 3,
+              "lineno": 1030
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\sessions.py",
+          "functions": [
+            {
+              "name": "merge_setting",
+              "complexity": 8,
+              "lineno": 62
+            },
+            {
+              "name": "merge_hooks",
+              "complexity": 5,
+              "lineno": 92
+            },
+            {
+              "name": "session",
+              "complexity": 1,
+              "lineno": 822
+            },
+            {
+              "name": "SessionRedirectMixin",
+              "complexity": 8,
+              "lineno": 107
+            },
+            {
+              "name": "get_redirect_target",
+              "complexity": 2,
+              "lineno": 108
+            },
+            {
+              "name": "should_strip_auth",
+              "complexity": 10,
+              "lineno": 128
+            },
+            {
+              "name": "resolve_redirects",
+              "complexity": 15,
+              "lineno": 160
+            },
+            {
+              "name": "rebuild_auth",
+              "complexity": 5,
+              "lineno": 283
+            },
+            {
+              "name": "rebuild_proxies",
+              "complexity": 6,
+              "lineno": 303
+            },
+            {
+              "name": "rebuild_method",
+              "complexity": 7,
+              "lineno": 334
+            },
+            {
+              "name": "Session",
+              "complexity": 3,
+              "lineno": 357
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 391
+            },
+            {
+              "name": "__enter__",
+              "complexity": 1,
+              "lineno": 454
+            },
+            {
+              "name": "__exit__",
+              "complexity": 1,
+              "lineno": 457
+            },
+            {
+              "name": "prepare_request",
+              "complexity": 6,
+              "lineno": 460
+            },
+            {
+              "name": "request",
+              "complexity": 4,
+              "lineno": 503
+            },
+            {
+              "name": "get",
+              "complexity": 1,
+              "lineno": 596
+            },
+            {
+              "name": "options",
+              "complexity": 1,
+              "lineno": 607
+            },
+            {
+              "name": "head",
+              "complexity": 1,
+              "lineno": 618
+            },
+            {
+              "name": "post",
+              "complexity": 1,
+              "lineno": 629
+            },
+            {
+              "name": "put",
+              "complexity": 1,
+              "lineno": 642
+            },
+            {
+              "name": "patch",
+              "complexity": 1,
+              "lineno": 654
+            },
+            {
+              "name": "delete",
+              "complexity": 1,
+              "lineno": 666
+            },
+            {
+              "name": "send",
+              "complexity": 11,
+              "lineno": 676
+            },
+            {
+              "name": "merge_environment_settings",
+              "complexity": 8,
+              "lineno": 753
+            },
+            {
+              "name": "get_adapter",
+              "complexity": 3,
+              "lineno": 784
+            },
+            {
+              "name": "close",
+              "complexity": 2,
+              "lineno": 797
+            },
+            {
+              "name": "mount",
+              "complexity": 4,
+              "lineno": 802
+            },
+            {
+              "name": "__getstate__",
+              "complexity": 2,
+              "lineno": 813
+            },
+            {
+              "name": "__setstate__",
+              "complexity": 2,
+              "lineno": 817
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\status_codes.py",
+          "functions": [
+            {
+              "name": "_init",
+              "complexity": 6,
+              "lineno": 109
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\structures.py",
+          "functions": [
+            {
+              "name": "CaseInsensitiveDict",
+              "complexity": 2,
+              "lineno": 13
+            },
+            {
+              "name": "__init__",
+              "complexity": 2,
+              "lineno": 40
+            },
+            {
+              "name": "__setitem__",
+              "complexity": 1,
+              "lineno": 46
+            },
+            {
+              "name": "__getitem__",
+              "complexity": 1,
+              "lineno": 51
+            },
+            {
+              "name": "__delitem__",
+              "complexity": 1,
+              "lineno": 54
+            },
+            {
+              "name": "__iter__",
+              "complexity": 2,
+              "lineno": 57
+            },
+            {
+              "name": "__len__",
+              "complexity": 1,
+              "lineno": 60
+            },
+            {
+              "name": "lower_items",
+              "complexity": 2,
+              "lineno": 63
+            },
+            {
+              "name": "__eq__",
+              "complexity": 2,
+              "lineno": 67
+            },
+            {
+              "name": "copy",
+              "complexity": 1,
+              "lineno": 76
+            },
+            {
+              "name": "__repr__",
+              "complexity": 1,
+              "lineno": 79
+            },
+            {
+              "name": "LookupDict",
+              "complexity": 2,
+              "lineno": 83
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 86
+            },
+            {
+              "name": "__repr__",
+              "complexity": 1,
+              "lineno": 90
+            },
+            {
+              "name": "__getitem__",
+              "complexity": 1,
+              "lineno": 93
+            },
+            {
+              "name": "get",
+              "complexity": 1,
+              "lineno": 98
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\utils.py",
+          "functions": [
+            {
+              "name": "proxy_bypass_registry",
+              "complexity": 9,
+              "lineno": 76
+            },
+            {
+              "name": "proxy_bypass",
+              "complexity": 2,
+              "lineno": 114
+            },
+            {
+              "name": "dict_to_sequence",
+              "complexity": 2,
+              "lineno": 126
+            },
+            {
+              "name": "super_len",
+              "complexity": 18,
+              "lineno": 135
+            },
+            {
+              "name": "get_netrc_auth",
+              "complexity": 12,
+              "lineno": 206
+            },
+            {
+              "name": "guess_filename",
+              "complexity": 5,
+              "lineno": 250
+            },
+            {
+              "name": "extract_zipped_paths",
+              "complexity": 7,
+              "lineno": 257
+            },
+            {
+              "name": "atomic_open",
+              "complexity": 2,
+              "lineno": 296
+            },
+            {
+              "name": "from_key_val_list",
+              "complexity": 3,
+              "lineno": 308
+            },
+            {
+              "name": "to_key_val_list",
+              "complexity": 4,
+              "lineno": 335
+            },
+            {
+              "name": "parse_list_header",
+              "complexity": 3,
+              "lineno": 365
+            },
+            {
+              "name": "parse_dict_header",
+              "complexity": 4,
+              "lineno": 397
+            },
+            {
+              "name": "unquote_header_value",
+              "complexity": 5,
+              "lineno": 432
+            },
+            {
+              "name": "dict_from_cookiejar",
+              "complexity": 2,
+              "lineno": 457
+            },
+            {
+              "name": "add_dict_to_cookiejar",
+              "complexity": 1,
+              "lineno": 468
+            },
+            {
+              "name": "get_encodings_from_content",
+              "complexity": 1,
+              "lineno": 479
+            },
+            {
+              "name": "_parse_content_type_header",
+              "complexity": 4,
+              "lineno": 504
+            },
+            {
+              "name": "get_encoding_from_headers",
+              "complexity": 5,
+              "lineno": 526
+            },
+            {
+              "name": "stream_decode_response_unicode",
+              "complexity": 5,
+              "lineno": 551
+            },
+            {
+              "name": "iter_slices",
+              "complexity": 4,
+              "lineno": 568
+            },
+            {
+              "name": "get_unicode_from_response",
+              "complexity": 4,
+              "lineno": 578
+            },
+            {
+              "name": "unquote_unreserved",
+              "complexity": 6,
+              "lineno": 623
+            },
+            {
+              "name": "requote_uri",
+              "complexity": 2,
+              "lineno": 647
+            },
+            {
+              "name": "address_in_network",
+              "complexity": 1,
+              "lineno": 669
+            },
+            {
+              "name": "dotted_netmask",
+              "complexity": 1,
+              "lineno": 684
+            },
+            {
+              "name": "is_ipv4_address",
+              "complexity": 2,
+              "lineno": 695
+            },
+            {
+              "name": "is_valid_cidr",
+              "complexity": 6,
+              "lineno": 706
+            },
+            {
+              "name": "set_environ",
+              "complexity": 4,
+              "lineno": 731
+            },
+            {
+              "name": "should_bypass_proxies",
+              "complexity": 17,
+              "lineno": 752
+            },
+            {
+              "name": "get_environ_proxies",
+              "complexity": 2,
+              "lineno": 813
+            },
+            {
+              "name": "select_proxy",
+              "complexity": 5,
+              "lineno": 825
+            },
+            {
+              "name": "resolve_proxies",
+              "complexity": 5,
+              "lineno": 851
+            },
+            {
+              "name": "default_user_agent",
+              "complexity": 1,
+              "lineno": 878
+            },
+            {
+              "name": "default_headers",
+              "complexity": 1,
+              "lineno": 887
+            },
+            {
+              "name": "parse_header_links",
+              "complexity": 6,
+              "lineno": 901
+            },
+            {
+              "name": "guess_json_utf",
+              "complexity": 11,
+              "lineno": 944
+            },
+            {
+              "name": "prepend_scheme_if_needed",
+              "complexity": 5,
+              "lineno": 976
+            },
+            {
+              "name": "get_auth_from_url",
+              "complexity": 2,
+              "lineno": 1005
+            },
+            {
+              "name": "check_header_validity",
+              "complexity": 1,
+              "lineno": 1021
+            },
+            {
+              "name": "_validate_header_part",
+              "complexity": 5,
+              "lineno": 1032
+            },
+            {
+              "name": "urldefragauth",
+              "complexity": 2,
+              "lineno": 1051
+            },
+            {
+              "name": "rewind_body",
+              "complexity": 4,
+              "lineno": 1068
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\_internal_utils.py",
+          "functions": [
+            {
+              "name": "to_native_string",
+              "complexity": 2,
+              "lineno": 26
+            },
+            {
+              "name": "unicode_is_ascii",
+              "complexity": 3,
+              "lineno": 39
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\__init__.py",
+          "functions": [
+            {
+              "name": "check_compatibility",
+              "complexity": 10,
+              "lineno": 58
+            },
+            {
+              "name": "_check_cryptography",
+              "complexity": 3,
+              "lineno": 93
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\compat.py",
+          "functions": [
+            {
+              "name": "u",
+              "complexity": 1,
+              "lineno": 14
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\conftest.py",
+          "functions": [
+            {
+              "name": "prepare_url",
+              "complexity": 1,
+              "lineno": 15
+            },
+            {
+              "name": "httpbin",
+              "complexity": 1,
+              "lineno": 26
+            },
+            {
+              "name": "httpbin_secure",
+              "complexity": 1,
+              "lineno": 31
+            },
+            {
+              "name": "nosan_server",
+              "complexity": 1,
+              "lineno": 36
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\test_adapters.py",
+          "functions": [
+            {
+              "name": "test_request_url_trims_leading_path_separators",
+              "complexity": 2,
+              "lineno": 4
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\test_help.py",
+          "functions": [
+            {
+              "name": "test_system_ssl",
+              "complexity": 2,
+              "lineno": 6
+            },
+            {
+              "name": "test_idna_without_version_attribute",
+              "complexity": 2,
+              "lineno": 16
+            },
+            {
+              "name": "test_idna_with_version_attribute",
+              "complexity": 2,
+              "lineno": 24
+            },
+            {
+              "name": "VersionedPackage",
+              "complexity": 2,
+              "lineno": 11
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 12
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\test_hooks.py",
+          "functions": [
+            {
+              "name": "hook",
+              "complexity": 1,
+              "lineno": 6
+            },
+            {
+              "name": "test_hooks",
+              "complexity": 2,
+              "lineno": 17
+            },
+            {
+              "name": "test_default_hooks",
+              "complexity": 2,
+              "lineno": 21
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\test_lowlevel.py",
+          "functions": [
+            {
+              "name": "echo_response_handler",
+              "complexity": 1,
+              "lineno": 12
+            },
+            {
+              "name": "test_chunked_upload",
+              "complexity": 3,
+              "lineno": 24
+            },
+            {
+              "name": "test_chunked_encoding_error",
+              "complexity": 1,
+              "lineno": 39
+            },
+            {
+              "name": "test_chunked_upload_uses_only_specified_host_header",
+              "complexity": 3,
+              "lineno": 63
+            },
+            {
+              "name": "test_chunked_upload_doesnt_skip_host_header",
+              "complexity": 3,
+              "lineno": 81
+            },
+            {
+              "name": "test_conflicting_content_lengths",
+              "complexity": 1,
+              "lineno": 99
+            },
+            {
+              "name": "test_digestauth_401_count_reset_on_redirect",
+              "complexity": 5,
+              "lineno": 127
+            },
+            {
+              "name": "test_digestauth_401_only_sent_once",
+              "complexity": 3,
+              "lineno": 192
+            },
+            {
+              "name": "test_digestauth_only_on_4xx",
+              "complexity": 3,
+              "lineno": 238
+            },
+            {
+              "name": "test_use_proxy_from_environment",
+              "complexity": 3,
+              "lineno": 290
+            },
+            {
+              "name": "test_redirect_rfc1808_to_non_ascii_location",
+              "complexity": 6,
+              "lineno": 308
+            },
+            {
+              "name": "test_fragment_not_sent_with_request",
+              "complexity": 6,
+              "lineno": 342
+            },
+            {
+              "name": "test_fragment_update_on_redirect",
+              "complexity": 6,
+              "lineno": 364
+            },
+            {
+              "name": "test_json_decode_compatibility_for_alt_utf_encodings",
+              "complexity": 4,
+              "lineno": 407
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\test_packages.py",
+          "functions": [
+            {
+              "name": "test_can_access_urllib3_attribute",
+              "complexity": 1,
+              "lineno": 4
+            },
+            {
+              "name": "test_can_access_idna_attribute",
+              "complexity": 1,
+              "lineno": 8
+            },
+            {
+              "name": "test_can_access_chardet_attribute",
+              "complexity": 1,
+              "lineno": 12
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\test_requests.py",
+          "functions": [
+            {
+              "name": "test_json_encodes_as_bytes",
+              "complexity": 2,
+              "lineno": 2591
+            },
+            {
+              "name": "test_requests_are_updated_each_time",
+              "complexity": 6,
+              "lineno": 2599
+            },
+            {
+              "name": "test_proxy_env_vars_override_default",
+              "complexity": 3,
+              "lineno": 2629
+            },
+            {
+              "name": "test_data_argument_accepts_tuples",
+              "complexity": 2,
+              "lineno": 2650
+            },
+            {
+              "name": "test_prepared_copy",
+              "complexity": 4,
+              "lineno": 2681
+            },
+            {
+              "name": "test_urllib3_retries",
+              "complexity": 1,
+              "lineno": 2690
+            },
+            {
+              "name": "test_urllib3_pool_connection_closed",
+              "complexity": 3,
+              "lineno": 2700
+            },
+            {
+              "name": "test_content_length_for_bytes_data",
+              "complexity": 2,
+              "lineno": 3014
+            },
+            {
+              "name": "test_content_length_for_string_data_counts_bytes",
+              "complexity": 2,
+              "lineno": 3028
+            },
+            {
+              "name": "test_json_decode_errors_are_serializable_deserializable",
+              "complexity": 2,
+              "lineno": 3037
+            },
+            {
+              "name": "TestRequests",
+              "complexity": 3,
+              "lineno": 84
+            },
+            {
+              "name": "test_entry_points",
+              "complexity": 1,
+              "lineno": 87
+            },
+            {
+              "name": "test_invalid_url",
+              "complexity": 1,
+              "lineno": 111
+            },
+            {
+              "name": "test_basic_building",
+              "complexity": 3,
+              "lineno": 115
+            },
+            {
+              "name": "test_no_content_length",
+              "complexity": 2,
+              "lineno": 125
+            },
+            {
+              "name": "test_no_body_content_length",
+              "complexity": 2,
+              "lineno": 130
+            },
+            {
+              "name": "test_empty_content_length",
+              "complexity": 2,
+              "lineno": 135
+            },
+            {
+              "name": "test_override_content_length",
+              "complexity": 3,
+              "lineno": 139
+            },
+            {
+              "name": "test_path_is_not_double_encoded",
+              "complexity": 2,
+              "lineno": 145
+            },
+            {
+              "name": "test_params_are_added_before_fragment",
+              "complexity": 2,
+              "lineno": 163
+            },
+            {
+              "name": "test_params_original_order_is_preserved_by_default",
+              "complexity": 2,
+              "lineno": 167
+            },
+            {
+              "name": "test_params_bytes_are_encoded",
+              "complexity": 2,
+              "lineno": 178
+            },
+            {
+              "name": "test_binary_put",
+              "complexity": 2,
+              "lineno": 184
+            },
+            {
+              "name": "test_whitespaces_are_removed_from_url",
+              "complexity": 2,
+              "lineno": 190
+            },
+            {
+              "name": "test_mixed_case_scheme_acceptable",
+              "complexity": 2,
+              "lineno": 196
+            },
+            {
+              "name": "test_HTTP_200_OK_GET_ALTERNATIVE",
+              "complexity": 2,
+              "lineno": 205
+            },
+            {
+              "name": "test_HTTP_302_ALLOW_REDIRECT_GET",
+              "complexity": 4,
+              "lineno": 214
+            },
+            {
+              "name": "test_HTTP_307_ALLOW_REDIRECT_POST",
+              "complexity": 5,
+              "lineno": 220
+            },
+            {
+              "name": "test_HTTP_307_ALLOW_REDIRECT_POST_WITH_SEEKABLE",
+              "complexity": 5,
+              "lineno": 231
+            },
+            {
+              "name": "test_HTTP_302_TOO_MANY_REDIRECTS",
+              "complexity": 6,
+              "lineno": 243
+            },
+            {
+              "name": "test_HTTP_302_TOO_MANY_REDIRECTS_WITH_PARAMS",
+              "complexity": 6,
+              "lineno": 254
+            },
+            {
+              "name": "test_http_301_changes_post_to_get",
+              "complexity": 5,
+              "lineno": 269
+            },
+            {
+              "name": "test_http_301_doesnt_change_head_to_get",
+              "complexity": 5,
+              "lineno": 276
+            },
+            {
+              "name": "test_http_302_changes_post_to_get",
+              "complexity": 5,
+              "lineno": 284
+            },
+            {
+              "name": "test_http_302_doesnt_change_head_to_get",
+              "complexity": 5,
+              "lineno": 291
+            },
+            {
+              "name": "test_http_303_changes_post_to_get",
+              "complexity": 5,
+              "lineno": 298
+            },
+            {
+              "name": "test_http_303_doesnt_change_head_to_get",
+              "complexity": 5,
+              "lineno": 305
+            },
+            {
+              "name": "test_header_and_body_removal_on_redirect",
+              "complexity": 4,
+              "lineno": 312
+            },
+            {
+              "name": "test_transfer_enc_removal_on_redirect",
+              "complexity": 6,
+              "lineno": 329
+            },
+            {
+              "name": "test_fragment_maintained_on_redirect",
+              "complexity": 4,
+              "lineno": 352
+            },
+            {
+              "name": "test_HTTP_200_OK_GET_WITH_PARAMS",
+              "complexity": 3,
+              "lineno": 360
+            },
+            {
+              "name": "test_HTTP_200_OK_GET_WITH_MIXED_PARAMS",
+              "complexity": 2,
+              "lineno": 368
+            },
+            {
+              "name": "test_set_cookie_on_301",
+              "complexity": 2,
+              "lineno": 376
+            },
+            {
+              "name": "test_cookie_sent_on_redirect",
+              "complexity": 2,
+              "lineno": 382
+            },
+            {
+              "name": "test_cookie_removed_on_expire",
+              "complexity": 3,
+              "lineno": 388
+            },
+            {
+              "name": "test_cookie_quote_wrapped",
+              "complexity": 2,
+              "lineno": 398
+            },
+            {
+              "name": "test_cookie_persists_via_api",
+              "complexity": 3,
+              "lineno": 403
+            },
+            {
+              "name": "test_request_cookie_overrides_session_cookie",
+              "complexity": 3,
+              "lineno": 409
+            },
+            {
+              "name": "test_request_cookies_not_persisted",
+              "complexity": 2,
+              "lineno": 417
+            },
+            {
+              "name": "test_generic_cookiejar_works",
+              "complexity": 3,
+              "lineno": 423
+            },
+            {
+              "name": "test_param_cookiejar_works",
+              "complexity": 2,
+              "lineno": 434
+            },
+            {
+              "name": "test_cookielib_cookiejar_on_redirect",
+              "complexity": 7,
+              "lineno": 442
+            },
+            {
+              "name": "test_requests_in_history_are_not_overridden",
+              "complexity": 4,
+              "lineno": 474
+            },
+            {
+              "name": "test_history_is_always_a_list",
+              "complexity": 4,
+              "lineno": 480
+            },
+            {
+              "name": "test_headers_on_session_with_None_are_not_sent",
+              "complexity": 2,
+              "lineno": 488
+            },
+            {
+              "name": "test_headers_preserve_order",
+              "complexity": 7,
+              "lineno": 496
+            },
+            {
+              "name": "test_user_agent_transfers",
+              "complexity": 2,
+              "lineno": 517
+            },
+            {
+              "name": "test_HTTP_200_OK_HEAD",
+              "complexity": 2,
+              "lineno": 523
+            },
+            {
+              "name": "test_HTTP_200_OK_PUT",
+              "complexity": 2,
+              "lineno": 527
+            },
+            {
+              "name": "test_BASICAUTH_TUPLE_HTTP_200_OK_GET",
+              "complexity": 4,
+              "lineno": 531
+            },
+            {
+              "name": "test_set_basicauth",
+              "complexity": 2,
+              "lineno": 555
+            },
+            {
+              "name": "test_basicauth_encodes_byte_strings",
+              "complexity": 2,
+              "lineno": 564
+            },
+            {
+              "name": "test_errors",
+              "complexity": 1,
+              "lineno": 585
+            },
+            {
+              "name": "test_proxy_error",
+              "complexity": 1,
+              "lineno": 589
+            },
+            {
+              "name": "test_proxy_error_on_bad_url",
+              "complexity": 1,
+              "lineno": 596
+            },
+            {
+              "name": "test_respect_proxy_env_on_send_self_prepared_request",
+              "complexity": 1,
+              "lineno": 609
+            },
+            {
+              "name": "test_respect_proxy_env_on_send_session_prepared_request",
+              "complexity": 1,
+              "lineno": 616
+            },
+            {
+              "name": "test_respect_proxy_env_on_send_with_redirects",
+              "complexity": 1,
+              "lineno": 624
+            },
+            {
+              "name": "test_respect_proxy_env_on_get",
+              "complexity": 1,
+              "lineno": 633
+            },
+            {
+              "name": "test_respect_proxy_env_on_request",
+              "complexity": 1,
+              "lineno": 639
+            },
+            {
+              "name": "test_proxy_authorization_preserved_on_request",
+              "complexity": 2,
+              "lineno": 645
+            },
+            {
+              "name": "test_proxy_authorization_not_appended_to_https_request",
+              "complexity": 2,
+              "lineno": 661
+            },
+            {
+              "name": "test_basicauth_with_netrc",
+              "complexity": 5,
+              "lineno": 675
+            },
+            {
+              "name": "test_basicauth_with_netrc_leak",
+              "complexity": 2,
+              "lineno": 710
+            },
+            {
+              "name": "test_DIGEST_HTTP_200_OK_GET",
+              "complexity": 5,
+              "lineno": 740
+            },
+            {
+              "name": "test_DIGEST_AUTH_RETURNS_COOKIE",
+              "complexity": 4,
+              "lineno": 757
+            },
+            {
+              "name": "test_DIGEST_AUTH_SETS_SESSION_COOKIES",
+              "complexity": 3,
+              "lineno": 767
+            },
+            {
+              "name": "test_DIGEST_STREAM",
+              "complexity": 4,
+              "lineno": 775
+            },
+            {
+              "name": "test_DIGESTAUTH_WRONG_HTTP_401_GET",
+              "complexity": 5,
+              "lineno": 786
+            },
+            {
+              "name": "test_DIGESTAUTH_QUOTES_QOP_VALUE",
+              "complexity": 3,
+              "lineno": 802
+            },
+            {
+              "name": "test_POSTBIN_GET_POST_FILES",
+              "complexity": 4,
+              "lineno": 810
+            },
+            {
+              "name": "test_invalid_files_input",
+              "complexity": 3,
+              "lineno": 827
+            },
+            {
+              "name": "test_POSTBIN_SEEKED_OBJECT_WITH_NO_ITER",
+              "complexity": 5,
+              "lineno": 833
+            },
+            {
+              "name": "test_POSTBIN_GET_POST_FILES_WITH_DATA",
+              "complexity": 4,
+              "lineno": 874
+            },
+            {
+              "name": "test_post_with_custom_mapping",
+              "complexity": 2,
+              "lineno": 891
+            },
+            {
+              "name": "test_conflicting_post_params",
+              "complexity": 1,
+              "lineno": 916
+            },
+            {
+              "name": "test_request_ok_set",
+              "complexity": 2,
+              "lineno": 922
+            },
+            {
+              "name": "test_status_raising",
+              "complexity": 2,
+              "lineno": 926
+            },
+            {
+              "name": "test_decompress_gzip",
+              "complexity": 1,
+              "lineno": 934
+            },
+            {
+              "name": "test_unicode_get",
+              "complexity": 1,
+              "lineno": 948
+            },
+            {
+              "name": "test_unicode_header_name",
+              "complexity": 1,
+              "lineno": 951
+            },
+            {
+              "name": "test_pyopenssl_redirect",
+              "complexity": 1,
+              "lineno": 958
+            },
+            {
+              "name": "test_invalid_ca_certificate_path",
+              "complexity": 2,
+              "lineno": 961
+            },
+            {
+              "name": "test_invalid_ssl_certificate_files",
+              "complexity": 3,
+              "lineno": 970
+            },
+            {
+              "name": "test_env_cert_bundles",
+              "complexity": 2,
+              "lineno": 1010
+            },
+            {
+              "name": "test_http_with_certificate",
+              "complexity": 2,
+              "lineno": 1018
+            },
+            {
+              "name": "test_https_warnings",
+              "complexity": 7,
+              "lineno": 1026
+            },
+            {
+              "name": "test_certificate_failure",
+              "complexity": 1,
+              "lineno": 1051
+            },
+            {
+              "name": "test_urlencoded_get_query_multivalued_param",
+              "complexity": 3,
+              "lineno": 1060
+            },
+            {
+              "name": "test_form_encoded_post_query_multivalued_element",
+              "complexity": 2,
+              "lineno": 1065
+            },
+            {
+              "name": "test_different_encodings_dont_break_post",
+              "complexity": 2,
+              "lineno": 1072
+            },
+            {
+              "name": "test_unicode_multipart_post",
+              "complexity": 2,
+              "lineno": 1091
+            },
+            {
+              "name": "test_unicode_multipart_post_fieldnames",
+              "complexity": 3,
+              "lineno": 1100
+            },
+            {
+              "name": "test_unicode_method_name",
+              "complexity": 2,
+              "lineno": 1114
+            },
+            {
+              "name": "test_unicode_method_name_with_request_object",
+              "complexity": 4,
+              "lineno": 1124
+            },
+            {
+              "name": "test_non_prepared_request_error",
+              "complexity": 2,
+              "lineno": 1136
+            },
+            {
+              "name": "test_custom_content_type",
+              "complexity": 3,
+              "lineno": 1144
+            },
+            {
+              "name": "test_hook_receives_request_arguments",
+              "complexity": 1,
+              "lineno": 1156
+            },
+            {
+              "name": "test_session_hooks_are_used_with_no_request_hooks",
+              "complexity": 3,
+              "lineno": 1166
+            },
+            {
+              "name": "test_session_hooks_are_overridden_by_request_hooks",
+              "complexity": 3,
+              "lineno": 1177
+            },
+            {
+              "name": "test_prepared_request_hook",
+              "complexity": 2,
+              "lineno": 1191
+            },
+            {
+              "name": "test_prepared_from_session",
+              "complexity": 3,
+              "lineno": 1205
+            },
+            {
+              "name": "test_prepare_request_with_bytestring_url",
+              "complexity": 2,
+              "lineno": 1222
+            },
+            {
+              "name": "test_request_with_bytestring_host",
+              "complexity": 2,
+              "lineno": 1228
+            },
+            {
+              "name": "test_links",
+              "complexity": 2,
+              "lineno": 1238
+            },
+            {
+              "name": "test_cookie_parameters",
+              "complexity": 6,
+              "lineno": 1264
+            },
+            {
+              "name": "test_cookie_as_dict_keeps_len",
+              "complexity": 5,
+              "lineno": 1282
+            },
+            {
+              "name": "test_cookie_as_dict_keeps_items",
+              "complexity": 4,
+              "lineno": 1302
+            },
+            {
+              "name": "test_cookie_as_dict_keys",
+              "complexity": 3,
+              "lineno": 1321
+            },
+            {
+              "name": "test_cookie_as_dict_values",
+              "complexity": 3,
+              "lineno": 1337
+            },
+            {
+              "name": "test_cookie_as_dict_items",
+              "complexity": 3,
+              "lineno": 1353
+            },
+            {
+              "name": "test_cookie_duplicate_names_different_domains",
+              "complexity": 4,
+              "lineno": 1369
+            },
+            {
+              "name": "test_cookie_duplicate_names_raises_cookie_conflict_error",
+              "complexity": 1,
+              "lineno": 1390
+            },
+            {
+              "name": "test_cookie_policy_copy",
+              "complexity": 2,
+              "lineno": 1401
+            },
+            {
+              "name": "test_time_elapsed_blank",
+              "complexity": 2,
+              "lineno": 1409
+            },
+            {
+              "name": "test_empty_response_has_content_none",
+              "complexity": 2,
+              "lineno": 1417
+            },
+            {
+              "name": "test_response_is_iterable",
+              "complexity": 2,
+              "lineno": 1421
+            },
+            {
+              "name": "test_response_decode_unicode",
+              "complexity": 3,
+              "lineno": 1434
+            },
+            {
+              "name": "test_response_reason_unicode",
+              "complexity": 2,
+              "lineno": 1453
+            },
+            {
+              "name": "test_response_reason_unicode_fallback",
+              "complexity": 2,
+              "lineno": 1462
+            },
+            {
+              "name": "test_response_chunk_size_type",
+              "complexity": 3,
+              "lineno": 1474
+            },
+            {
+              "name": "test_iter_content_wraps_exceptions",
+              "complexity": 1,
+              "lineno": 1502
+            },
+            {
+              "name": "test_request_and_response_are_pickleable",
+              "complexity": 4,
+              "lineno": 1512
+            },
+            {
+              "name": "test_prepared_request_is_pickleable",
+              "complexity": 5,
+              "lineno": 1524
+            },
+            {
+              "name": "test_prepared_request_with_file_is_pickleable",
+              "complexity": 5,
+              "lineno": 1538
+            },
+            {
+              "name": "test_prepared_request_with_hook_is_pickleable",
+              "complexity": 6,
+              "lineno": 1554
+            },
+            {
+              "name": "test_cannot_send_unprepared_requests",
+              "complexity": 1,
+              "lineno": 1570
+            },
+            {
+              "name": "test_http_error",
+              "complexity": 5,
+              "lineno": 1575
+            },
+            {
+              "name": "test_session_pickling",
+              "complexity": 2,
+              "lineno": 1585
+            },
+            {
+              "name": "test_fixes_1329",
+              "complexity": 4,
+              "lineno": 1595
+            },
+            {
+              "name": "test_uppercase_scheme_redirect",
+              "complexity": 3,
+              "lineno": 1606
+            },
+            {
+              "name": "test_transport_adapter_ordering",
+              "complexity": 6,
+              "lineno": 1613
+            },
+            {
+              "name": "test_session_get_adapter_prefix_matching",
+              "complexity": 4,
+              "lineno": 1651
+            },
+            {
+              "name": "test_session_get_adapter_prefix_matching_mixed_case",
+              "complexity": 2,
+              "lineno": 1675
+            },
+            {
+              "name": "test_session_get_adapter_prefix_matching_is_case_insensitive",
+              "complexity": 2,
+              "lineno": 1685
+            },
+            {
+              "name": "test_session_get_adapter_prefix_with_trailing_slash",
+              "complexity": 3,
+              "lineno": 1697
+            },
+            {
+              "name": "test_session_get_adapter_prefix_without_trailing_slash",
+              "complexity": 3,
+              "lineno": 1710
+            },
+            {
+              "name": "test_header_remove_is_case_insensitive",
+              "complexity": 2,
+              "lineno": 1723
+            },
+            {
+              "name": "test_params_are_merged_case_sensitive",
+              "complexity": 2,
+              "lineno": 1730
+            },
+            {
+              "name": "test_long_authinfo_in_url",
+              "complexity": 2,
+              "lineno": 1736
+            },
+            {
+              "name": "test_header_keys_are_native",
+              "complexity": 3,
+              "lineno": 1745
+            },
+            {
+              "name": "test_header_validation",
+              "complexity": 3,
+              "lineno": 1755
+            },
+            {
+              "name": "test_header_value_not_str",
+              "complexity": 2,
+              "lineno": 1775
+            },
+            {
+              "name": "test_header_no_return_chars",
+              "complexity": 1,
+              "lineno": 1801
+            },
+            {
+              "name": "test_header_no_leading_space",
+              "complexity": 1,
+              "lineno": 1820
+            },
+            {
+              "name": "test_header_with_subclass_types",
+              "complexity": 4,
+              "lineno": 1827
+            },
+            {
+              "name": "test_can_send_objects_with_files",
+              "complexity": 2,
+              "lineno": 1853
+            },
+            {
+              "name": "test_can_send_file_object_with_non_string_filename",
+              "complexity": 2,
+              "lineno": 1860
+            },
+            {
+              "name": "test_autoset_header_values_are_native",
+              "complexity": 2,
+              "lineno": 1868
+            },
+            {
+              "name": "test_nonhttp_schemes_dont_check_URLs",
+              "complexity": 3,
+              "lineno": 1876
+            },
+            {
+              "name": "test_auth_is_stripped_on_http_downgrade",
+              "complexity": 3,
+              "lineno": 1887
+            },
+            {
+              "name": "test_auth_is_retained_for_redirect_on_host",
+              "complexity": 2,
+              "lineno": 1899
+            },
+            {
+              "name": "test_should_strip_auth_host_change",
+              "complexity": 2,
+              "lineno": 1906
+            },
+            {
+              "name": "test_should_strip_auth_http_downgrade",
+              "complexity": 2,
+              "lineno": 1912
+            },
+            {
+              "name": "test_should_strip_auth_https_upgrade",
+              "complexity": 6,
+              "lineno": 1916
+            },
+            {
+              "name": "test_should_strip_auth_port_change",
+              "complexity": 2,
+              "lineno": 1935
+            },
+            {
+              "name": "test_should_strip_auth_default_port",
+              "complexity": 2,
+              "lineno": 1950
+            },
+            {
+              "name": "test_manual_redirect_with_partial_body_read",
+              "complexity": 5,
+              "lineno": 1954
+            },
+            {
+              "name": "test_prepare_body_position_non_stream",
+              "complexity": 2,
+              "lineno": 1973
+            },
+            {
+              "name": "test_rewind_body",
+              "complexity": 5,
+              "lineno": 1978
+            },
+            {
+              "name": "test_rewind_partially_read_body",
+              "complexity": 5,
+              "lineno": 1991
+            },
+            {
+              "name": "test_rewind_body_no_seek",
+              "complexity": 3,
+              "lineno": 2005
+            },
+            {
+              "name": "test_rewind_body_failed_seek",
+              "complexity": 3,
+              "lineno": 2025
+            },
+            {
+              "name": "test_rewind_body_failed_tell",
+              "complexity": 3,
+              "lineno": 2048
+            },
+            {
+              "name": "_patch_adapter_gzipped_redirect",
+              "complexity": 1,
+              "lineno": 2068
+            },
+            {
+              "name": "test_redirect_with_wrong_gzipped_header",
+              "complexity": 1,
+              "lineno": 2082
+            },
+            {
+              "name": "test_basic_auth_str_is_always_native",
+              "complexity": 3,
+              "lineno": 2099
+            },
+            {
+              "name": "test_requests_history_is_saved",
+              "complexity": 3,
+              "lineno": 2104
+            },
+            {
+              "name": "test_json_param_post_content_type_works",
+              "complexity": 4,
+              "lineno": 2112
+            },
+            {
+              "name": "test_json_param_post_should_not_override_data_param",
+              "complexity": 2,
+              "lineno": 2118
+            },
+            {
+              "name": "test_response_iter_lines",
+              "complexity": 3,
+              "lineno": 2128
+            },
+            {
+              "name": "test_response_context_manager",
+              "complexity": 3,
+              "lineno": 2136
+            },
+            {
+              "name": "test_unconsumed_session_response_closes_connection",
+              "complexity": 3,
+              "lineno": 2142
+            },
+            {
+              "name": "test_response_iter_lines_reentrant",
+              "complexity": 3,
+              "lineno": 2152
+            },
+            {
+              "name": "test_session_close_proxy_clear",
+              "complexity": 1,
+              "lineno": 2160
+            },
+            {
+              "name": "test_proxy_auth",
+              "complexity": 2,
+              "lineno": 2171
+            },
+            {
+              "name": "test_proxy_auth_empty_pass",
+              "complexity": 2,
+              "lineno": 2176
+            },
+            {
+              "name": "test_response_json_when_content_is_None",
+              "complexity": 2,
+              "lineno": 2181
+            },
+            {
+              "name": "test_response_without_release_conn",
+              "complexity": 3,
+              "lineno": 2192
+            },
+            {
+              "name": "test_empty_stream_with_auth_does_not_set_content_length_header",
+              "complexity": 3,
+              "lineno": 2202
+            },
+            {
+              "name": "test_stream_with_auth_does_not_set_transfer_encoding_header",
+              "complexity": 3,
+              "lineno": 2214
+            },
+            {
+              "name": "test_chunked_upload_does_not_set_content_length_header",
+              "complexity": 4,
+              "lineno": 2226
+            },
+            {
+              "name": "test_custom_redirect_mixin",
+              "complexity": 8,
+              "lineno": 2237
+            },
+            {
+              "name": "TestCaseInsensitiveDict",
+              "complexity": 4,
+              "lineno": 2282
+            },
+            {
+              "name": "test_init",
+              "complexity": 4,
+              "lineno": 2291
+            },
+            {
+              "name": "test_docstring_example",
+              "complexity": 3,
+              "lineno": 2296
+            },
+            {
+              "name": "test_len",
+              "complexity": 2,
+              "lineno": 2302
+            },
+            {
+              "name": "test_getitem",
+              "complexity": 3,
+              "lineno": 2307
+            },
+            {
+              "name": "test_fixes_649",
+              "complexity": 4,
+              "lineno": 2312
+            },
+            {
+              "name": "test_delitem",
+              "complexity": 3,
+              "lineno": 2323
+            },
+            {
+              "name": "test_contains",
+              "complexity": 6,
+              "lineno": 2330
+            },
+            {
+              "name": "test_get",
+              "complexity": 5,
+              "lineno": 2339
+            },
+            {
+              "name": "test_update",
+              "complexity": 5,
+              "lineno": 2348
+            },
+            {
+              "name": "test_update_retains_unchanged",
+              "complexity": 2,
+              "lineno": 2359
+            },
+            {
+              "name": "test_iter",
+              "complexity": 2,
+              "lineno": 2364
+            },
+            {
+              "name": "test_equality",
+              "complexity": 5,
+              "lineno": 2369
+            },
+            {
+              "name": "test_setdefault",
+              "complexity": 3,
+              "lineno": 2378
+            },
+            {
+              "name": "test_lower_items",
+              "complexity": 3,
+              "lineno": 2383
+            },
+            {
+              "name": "test_preserve_key_case",
+              "complexity": 4,
+              "lineno": 2394
+            },
+            {
+              "name": "test_preserve_last_key_case",
+              "complexity": 4,
+              "lineno": 2406
+            },
+            {
+              "name": "test_copy",
+              "complexity": 3,
+              "lineno": 2420
+            },
+            {
+              "name": "TestMorselToCookieExpires",
+              "complexity": 3,
+              "lineno": 2433
+            },
+            {
+              "name": "test_expires_valid_str",
+              "complexity": 2,
+              "lineno": 2436
+            },
+            {
+              "name": "test_expires_invalid_int",
+              "complexity": 1,
+              "lineno": 2451
+            },
+            {
+              "name": "test_expires_none",
+              "complexity": 2,
+              "lineno": 2458
+            },
+            {
+              "name": "TestMorselToCookieMaxAge",
+              "complexity": 3,
+              "lineno": 2467
+            },
+            {
+              "name": "test_max_age_valid_int",
+              "complexity": 2,
+              "lineno": 2470
+            },
+            {
+              "name": "test_max_age_invalid_str",
+              "complexity": 1,
+              "lineno": 2478
+            },
+            {
+              "name": "TestTimeout",
+              "complexity": 3,
+              "lineno": 2487
+            },
+            {
+              "name": "test_stream_timeout",
+              "complexity": 3,
+              "lineno": 2488
+            },
+            {
+              "name": "test_invalid_timeout",
+              "complexity": 2,
+              "lineno": 2501
+            },
+            {
+              "name": "test_none_timeout",
+              "complexity": 2,
+              "lineno": 2507
+            },
+            {
+              "name": "test_read_timeout",
+              "complexity": 2,
+              "lineno": 2522
+            },
+            {
+              "name": "test_connect_timeout",
+              "complexity": 4,
+              "lineno": 2532
+            },
+            {
+              "name": "test_total_timeout_connect",
+              "complexity": 2,
+              "lineno": 2543
+            },
+            {
+              "name": "test_encoded_methods",
+              "complexity": 2,
+              "lineno": 2550
+            },
+            {
+              "name": "RedirectSession",
+              "complexity": 2,
+              "lineno": 2559
+            },
+            {
+              "name": "__init__",
+              "complexity": 1,
+              "lineno": 2560
+            },
+            {
+              "name": "send",
+              "complexity": 1,
+              "lineno": 2567
+            },
+            {
+              "name": "build_response",
+              "complexity": 2,
+              "lineno": 2571
+            },
+            {
+              "name": "_build_raw",
+              "complexity": 1,
+              "lineno": 2585
+            },
+            {
+              "name": "TestPreparingURLs",
+              "complexity": 3,
+              "lineno": 2710
+            },
+            {
+              "name": "test_preparing_url",
+              "complexity": 2,
+              "lineno": 2742
+            },
+            {
+              "name": "test_preparing_bad_url",
+              "complexity": 1,
+              "lineno": 2764
+            },
+            {
+              "name": "test_redirecting_to_bad_url",
+              "complexity": 1,
+              "lineno": 2770
+            },
+            {
+              "name": "test_url_mutation",
+              "complexity": 2,
+              "lineno": 2799
+            },
+            {
+              "name": "test_parameters_for_nonstandard_schemes",
+              "complexity": 2,
+              "lineno": 2835
+            },
+            {
+              "name": "test_post_json_nan",
+              "complexity": 1,
+              "lineno": 2844
+            },
+            {
+              "name": "test_json_decode_compatibility",
+              "complexity": 4,
+              "lineno": 2849
+            },
+            {
+              "name": "test_json_decode_persists_doc_attr",
+              "complexity": 2,
+              "lineno": 2857
+            },
+            {
+              "name": "test_status_code_425",
+              "complexity": 7,
+              "lineno": 2863
+            },
+            {
+              "name": "test_different_connection_pool_for_tls_settings_verify_True",
+              "complexity": 3,
+              "lineno": 2878
+            },
+            {
+              "name": "test_different_connection_pool_for_tls_settings_verify_bundle_expired_cert",
+              "complexity": 3,
+              "lineno": 2909
+            },
+            {
+              "name": "test_different_connection_pool_for_tls_settings_verify_bundle_unexpired_cert",
+              "complexity": 4,
+              "lineno": 2942
+            },
+            {
+              "name": "test_different_connection_pool_for_mtls_settings",
+              "complexity": 3,
+              "lineno": 2974
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\test_structures.py",
+          "functions": [
+            {
+              "name": "TestCaseInsensitiveDict",
+              "complexity": 3,
+              "lineno": 6
+            },
+            {
+              "name": "setup",
+              "complexity": 1,
+              "lineno": 8
+            },
+            {
+              "name": "test_list",
+              "complexity": 2,
+              "lineno": 13
+            },
+            {
+              "name": "test_getitem",
+              "complexity": 2,
+              "lineno": 21
+            },
+            {
+              "name": "test_delitem",
+              "complexity": 2,
+              "lineno": 25
+            },
+            {
+              "name": "test_lower_items",
+              "complexity": 2,
+              "lineno": 29
+            },
+            {
+              "name": "test_repr",
+              "complexity": 2,
+              "lineno": 34
+            },
+            {
+              "name": "test_copy",
+              "complexity": 3,
+              "lineno": 37
+            },
+            {
+              "name": "test_instance_equality",
+              "complexity": 2,
+              "lineno": 50
+            },
+            {
+              "name": "TestLookupDict",
+              "complexity": 3,
+              "lineno": 54
+            },
+            {
+              "name": "setup",
+              "complexity": 1,
+              "lineno": 56
+            },
+            {
+              "name": "test_repr",
+              "complexity": 2,
+              "lineno": 61
+            },
+            {
+              "name": "test_getitem",
+              "complexity": 2,
+              "lineno": 73
+            },
+            {
+              "name": "test_get",
+              "complexity": 2,
+              "lineno": 77
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\test_testserver.py",
+          "functions": [
+            {
+              "name": "TestTestServer",
+              "complexity": 3,
+              "lineno": 11
+            },
+            {
+              "name": "test_basic",
+              "complexity": 2,
+              "lineno": 12
+            },
+            {
+              "name": "test_server_closes",
+              "complexity": 1,
+              "lineno": 30
+            },
+            {
+              "name": "test_text_response",
+              "complexity": 4,
+              "lineno": 42
+            },
+            {
+              "name": "test_basic_response",
+              "complexity": 4,
+              "lineno": 55
+            },
+            {
+              "name": "test_basic_waiting_server",
+              "complexity": 1,
+              "lineno": 63
+            },
+            {
+              "name": "test_multiple_requests",
+              "complexity": 3,
+              "lineno": 78
+            },
+            {
+              "name": "test_request_recovery",
+              "complexity": 3,
+              "lineno": 95
+            },
+            {
+              "name": "test_requests_after_timeout_are_not_received",
+              "complexity": 2,
+              "lineno": 117
+            },
+            {
+              "name": "test_request_recovery_with_bigger_timeout",
+              "complexity": 2,
+              "lineno": 130
+            },
+            {
+              "name": "test_server_finishes_on_error",
+              "complexity": 2,
+              "lineno": 144
+            },
+            {
+              "name": "test_server_finishes_when_no_connections",
+              "complexity": 2,
+              "lineno": 156
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\test_utils.py",
+          "functions": [
+            {
+              "name": "test_get_auth_from_url",
+              "complexity": 2,
+              "lineno": 472
+            },
+            {
+              "name": "test_requote_uri_with_unquoted_percents",
+              "complexity": 2,
+              "lineno": 491
+            },
+            {
+              "name": "test_unquote_unreserved",
+              "complexity": 2,
+              "lineno": 511
+            },
+            {
+              "name": "test_dotted_netmask",
+              "complexity": 2,
+              "lineno": 523
+            },
+            {
+              "name": "test_select_proxies",
+              "complexity": 2,
+              "lineno": 563
+            },
+            {
+              "name": "test_parse_dict_header",
+              "complexity": 2,
+              "lineno": 575
+            },
+            {
+              "name": "test__parse_content_type_header",
+              "complexity": 2,
+              "lineno": 635
+            },
+            {
+              "name": "test_get_encoding_from_headers",
+              "complexity": 2,
+              "lineno": 654
+            },
+            {
+              "name": "test_iter_slices",
+              "complexity": 6,
+              "lineno": 669
+            },
+            {
+              "name": "test_parse_header_links",
+              "complexity": 2,
+              "lineno": 696
+            },
+            {
+              "name": "test_prepend_scheme_if_needed",
+              "complexity": 2,
+              "lineno": 713
+            },
+            {
+              "name": "test_to_native_string",
+              "complexity": 2,
+              "lineno": 725
+            },
+            {
+              "name": "test_urldefragauth",
+              "complexity": 2,
+              "lineno": 740
+            },
+            {
+              "name": "test_should_bypass_proxies",
+              "complexity": 2,
+              "lineno": 759
+            },
+            {
+              "name": "test_should_bypass_proxies_pass_only_hostname",
+              "complexity": 1,
+              "lineno": 787
+            },
+            {
+              "name": "test_add_dict_to_cookiejar",
+              "complexity": 3,
+              "lineno": 803
+            },
+            {
+              "name": "test_unicode_is_ascii",
+              "complexity": 2,
+              "lineno": 821
+            },
+            {
+              "name": "test_should_bypass_proxies_no_proxy",
+              "complexity": 2,
+              "lineno": 838
+            },
+            {
+              "name": "test_should_bypass_proxies_win_registry",
+              "complexity": 3,
+              "lineno": 863
+            },
+            {
+              "name": "test_should_bypass_proxies_win_registry_bad_values",
+              "complexity": 2,
+              "lineno": 901
+            },
+            {
+              "name": "test_set_environ",
+              "complexity": 3,
+              "lineno": 942
+            },
+            {
+              "name": "test_set_environ_raises_exception",
+              "complexity": 2,
+              "lineno": 951
+            },
+            {
+              "name": "test_should_bypass_proxies_win_registry_ProxyOverride_value",
+              "complexity": 2,
+              "lineno": 962
+            },
+            {
+              "name": "TestSuperLen",
+              "complexity": 3,
+              "lineno": 50
+            },
+            {
+              "name": "test_io_streams",
+              "complexity": 3,
+              "lineno": 61
+            },
+            {
+              "name": "test_super_len_correctly_calculates_len_of_partially_read_file",
+              "complexity": 2,
+              "lineno": 66
+            },
+            {
+              "name": "test_super_len_handles_files_raising_weird_errors_in_tell",
+              "complexity": 2,
+              "lineno": 73
+            },
+            {
+              "name": "test_super_len_tell_ioerror",
+              "complexity": 2,
+              "lineno": 86
+            },
+            {
+              "name": "test_string",
+              "complexity": 2,
+              "lineno": 98
+            },
+            {
+              "name": "test_file",
+              "complexity": 3,
+              "lineno": 108
+            },
+            {
+              "name": "test_tarfile_member",
+              "complexity": 2,
+              "lineno": 115
+            },
+            {
+              "name": "test_super_len_with__len__",
+              "complexity": 2,
+              "lineno": 127
+            },
+            {
+              "name": "test_super_len_with_no__len__",
+              "complexity": 2,
+              "lineno": 132
+            },
+            {
+              "name": "test_super_len_with_tell",
+              "complexity": 3,
+              "lineno": 139
+            },
+            {
+              "name": "test_super_len_with_fileno",
+              "complexity": 2,
+              "lineno": 145
+            },
+            {
+              "name": "test_super_len_with_no_matches",
+              "complexity": 2,
+              "lineno": 151
+            },
+            {
+              "name": "TestGetNetrcAuth",
+              "complexity": 3,
+              "lineno": 156
+            },
+            {
+              "name": "test_works",
+              "complexity": 2,
+              "lineno": 157
+            },
+            {
+              "name": "test_not_vulnerable_to_bad_url_parsing",
+              "complexity": 2,
+              "lineno": 165
+            },
+            {
+              "name": "test_empty_default_credentials_ignored",
+              "complexity": 2,
+              "lineno": 173
+            },
+            {
+              "name": "TestToKeyValList",
+              "complexity": 3,
+              "lineno": 184
+            },
+            {
+              "name": "test_valid",
+              "complexity": 2,
+              "lineno": 194
+            },
+            {
+              "name": "test_invalid",
+              "complexity": 1,
+              "lineno": 197
+            },
+            {
+              "name": "TestUnquoteHeaderValue",
+              "complexity": 3,
+              "lineno": 202
+            },
+            {
+              "name": "test_valid",
+              "complexity": 2,
+              "lineno": 213
+            },
+            {
+              "name": "test_is_filename",
+              "complexity": 2,
+              "lineno": 216
+            },
+            {
+              "name": "TestGetEnvironProxies",
+              "complexity": 3,
+              "lineno": 220
+            },
+            {
+              "name": "no_proxy",
+              "complexity": 1,
+              "lineno": 226
+            },
+            {
+              "name": "test_bypass",
+              "complexity": 2,
+              "lineno": 241
+            },
+            {
+              "name": "test_not_bypass",
+              "complexity": 2,
+              "lineno": 252
+            },
+            {
+              "name": "test_bypass_no_proxy_keyword",
+              "complexity": 2,
+              "lineno": 263
+            },
+            {
+              "name": "test_not_bypass_no_proxy_keyword",
+              "complexity": 2,
+              "lineno": 277
+            },
+            {
+              "name": "TestIsIPv4Address",
+              "complexity": 3,
+              "lineno": 285
+            },
+            {
+              "name": "test_valid",
+              "complexity": 2,
+              "lineno": 286
+            },
+            {
+              "name": "test_invalid",
+              "complexity": 2,
+              "lineno": 290
+            },
+            {
+              "name": "TestIsValidCIDR",
+              "complexity": 3,
+              "lineno": 294
+            },
+            {
+              "name": "test_valid",
+              "complexity": 2,
+              "lineno": 295
+            },
+            {
+              "name": "test_invalid",
+              "complexity": 2,
+              "lineno": 308
+            },
+            {
+              "name": "TestAddressInNetwork",
+              "complexity": 3,
+              "lineno": 312
+            },
+            {
+              "name": "test_valid",
+              "complexity": 2,
+              "lineno": 313
+            },
+            {
+              "name": "test_invalid",
+              "complexity": 2,
+              "lineno": 316
+            },
+            {
+              "name": "TestGuessFilename",
+              "complexity": 4,
+              "lineno": 320
+            },
+            {
+              "name": "test_guess_filename_invalid",
+              "complexity": 2,
+              "lineno": 325
+            },
+            {
+              "name": "test_guess_filename_valid",
+              "complexity": 3,
+              "lineno": 335
+            },
+            {
+              "name": "TestExtractZippedPaths",
+              "complexity": 4,
+              "lineno": 342
+            },
+            {
+              "name": "test_unzipped_paths_unchanged",
+              "complexity": 2,
+              "lineno": 352
+            },
+            {
+              "name": "test_zipped_paths_extracted",
+              "complexity": 4,
+              "lineno": 355
+            },
+            {
+              "name": "test_invalid_unc_path",
+              "complexity": 2,
+              "lineno": 371
+            },
+            {
+              "name": "TestContentEncodingDetection",
+              "complexity": 3,
+              "lineno": 376
+            },
+            {
+              "name": "test_none",
+              "complexity": 2,
+              "lineno": 377
+            },
+            {
+              "name": "test_pragmas",
+              "complexity": 3,
+              "lineno": 394
+            },
+            {
+              "name": "test_precedence",
+              "complexity": 2,
+              "lineno": 399
+            },
+            {
+              "name": "TestGuessJSONUTF",
+              "complexity": 3,
+              "lineno": 408
+            },
+            {
+              "name": "test_encoded",
+              "complexity": 2,
+              "lineno": 422
+            },
+            {
+              "name": "test_bad_utf_like_encoding",
+              "complexity": 2,
+              "lineno": 426
+            },
+            {
+              "name": "test_guess_by_bom",
+              "complexity": 2,
+              "lineno": 438
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\utils.py",
+          "functions": [
+            {
+              "name": "override_environ",
+              "complexity": 3,
+              "lineno": 6
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\testserver\\server.py",
+          "functions": [
+            {
+              "name": "consume_socket_content",
+              "complexity": 4,
+              "lineno": 7
+            },
+            {
+              "name": "Server",
+              "complexity": 3,
+              "lineno": 25
+            },
+            {
+              "name": "__init__",
+              "complexity": 2,
+              "lineno": 30
+            },
+            {
+              "name": "text_response_server",
+              "complexity": 1,
+              "lineno": 52
+            },
+            {
+              "name": "basic_response_server",
+              "complexity": 1,
+              "lineno": 62
+            },
+            {
+              "name": "run",
+              "complexity": 2,
+              "lineno": 67
+            },
+            {
+              "name": "_create_socket_and_bind",
+              "complexity": 1,
+              "lineno": 82
+            },
+            {
+              "name": "_close_server_sock_ignore_errors",
+              "complexity": 2,
+              "lineno": 88
+            },
+            {
+              "name": "_handle_requests",
+              "complexity": 3,
+              "lineno": 94
+            },
+            {
+              "name": "_accept_connection",
+              "complexity": 3,
+              "lineno": 105
+            },
+            {
+              "name": "__enter__",
+              "complexity": 2,
+              "lineno": 117
+            },
+            {
+              "name": "__exit__",
+              "complexity": 3,
+              "lineno": 123
+            },
+            {
+              "name": "TLSServer",
+              "complexity": 3,
+              "lineno": 138
+            },
+            {
+              "name": "__init__",
+              "complexity": 2,
+              "lineno": 139
+            },
+            {
+              "name": "_create_socket_and_bind",
+              "complexity": 1,
+              "lineno": 171
+            }
+          ]
+        }
+      ]
+    },
+    "lizard": {
+      "tool": "lizard",
+      "files": [
+        {
+          "file": "repos\\requests\\src\\requests\\adapters.py",
+          "functions": [
+            {
+              "name": "send",
+              "lineno": 591,
+              "length": 107,
+              "token_count": 466,
+              "complexity": 19
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\auth.py",
+          "functions": [
+            {
+              "name": "build_digest_header",
+              "lineno": 126,
+              "length": 109,
+              "token_count": 383,
+              "complexity": 19
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\models.py",
+          "functions": [
+            {
+              "name": "_encode_files",
+              "lineno": 139,
+              "length": 67,
+              "token_count": 311,
+              "complexity": 21
+            },
+            {
+              "name": "prepare_url",
+              "lineno": 411,
+              "length": 73,
+              "token_count": 256,
+              "complexity": 17
+            },
+            {
+              "name": "prepare_body",
+              "lineno": 496,
+              "length": 77,
+              "token_count": 285,
+              "complexity": 17
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\sessions.py",
+          "functions": [
+            {
+              "name": "resolve_redirects",
+              "lineno": 160,
+              "length": 122,
+              "token_count": 454,
+              "complexity": 15
+            },
+            {
+              "name": "__init__",
+              "lineno": 391,
+              "length": 62,
+              "token_count": 97,
+              "complexity": 1
+            },
+            {
+              "name": "request",
+              "lineno": 503,
+              "length": 92,
+              "token_count": 185,
+              "complexity": 4
+            },
+            {
+              "name": "send",
+              "lineno": 676,
+              "length": 76,
+              "token_count": 291,
+              "complexity": 11
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\src\\requests\\utils.py",
+          "functions": [
+            {
+              "name": "super_len",
+              "lineno": 135,
+              "length": 69,
+              "token_count": 211,
+              "complexity": 16
+            }
+          ]
+        },
+        {
+          "file": "repos\\requests\\tests\\test_lowlevel.py",
+          "functions": [
+            {
+              "name": "test_digestauth_401_count_reset_on_redirect",
+              "lineno": 127,
+              "length": 63,
+              "token_count": 147,
+              "complexity": 1
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "issues": [
+    {
+      "id": "51008322-8c9e-4618-9b56-3004a4c77f04",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/adapters.py",
+      "module": "requests.adapters",
+      "function": "cert_verify",
+      "line": 281,
+      "value": 14,
+      "message": "Medium complexity in function 'cert_verify'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "90828d99-1841-41f2-9cb8-abec84e9c7cc",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "medium",
+      "file": "src/requests/adapters.py",
+      "module": "requests.adapters",
+      "function": "send",
+      "line": 591,
+      "value": 19,
+      "message": "Medium complexity in function 'send'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "2a94f2a8-1355-46d1-901c-11a4df1953f7",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "medium",
+      "file": "src/requests/auth.py",
+      "module": "requests.auth",
+      "function": "build_digest_header",
+      "line": 126,
+      "value": 19,
+      "message": "Medium complexity in function 'build_digest_header'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "a025140a-6209-4c53-8a8b-c9c7023db70e",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/models.py",
+      "module": "requests.models",
+      "function": "RequestEncodingMixin",
+      "line": 86,
+      "value": 13,
+      "message": "Medium complexity in function 'RequestEncodingMixin'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "3250341a-188e-41e3-aff6-f11137dc3b04",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/models.py",
+      "module": "requests.models",
+      "function": "_encode_params",
+      "line": 109,
+      "value": 11,
+      "message": "Medium complexity in function '_encode_params'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "215d5238-c633-4f82-8a4c-fd49c98e6188",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "high",
+      "effort": "medium",
+      "file": "src/requests/models.py",
+      "module": "requests.models",
+      "function": "_encode_files",
+      "line": 139,
+      "value": 21,
+      "message": "High complexity in function '_encode_files'",
+      "impact": "High maintenance cost and bug-prone",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "71ba93d9-8070-4ee3-aa7f-5a90586913ca",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "medium",
+      "file": "src/requests/models.py",
+      "module": "requests.models",
+      "function": "prepare_url",
+      "line": 411,
+      "value": 17,
+      "message": "Medium complexity in function 'prepare_url'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "86c2ab25-455a-4da9-828b-65a3a63e62eb",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "medium",
+      "file": "src/requests/models.py",
+      "module": "requests.models",
+      "function": "prepare_body",
+      "line": 496,
+      "value": 17,
+      "message": "Medium complexity in function 'prepare_body'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "f6bdd23e-40c3-47a9-9e58-e53bfb61b899",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/sessions.py",
+      "module": "requests.sessions",
+      "function": "should_strip_auth",
+      "line": 128,
+      "value": 10,
+      "message": "Medium complexity in function 'should_strip_auth'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "9017375b-9035-4f26-83d9-bd280d9af36d",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "medium",
+      "file": "src/requests/sessions.py",
+      "module": "requests.sessions",
+      "function": "resolve_redirects",
+      "line": 160,
+      "value": 15,
+      "message": "Medium complexity in function 'resolve_redirects'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "ce2921d5-c376-41d1-8cff-259e062031c9",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/sessions.py",
+      "module": "requests.sessions",
+      "function": "send",
+      "line": 676,
+      "value": 11,
+      "message": "Medium complexity in function 'send'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "33b860da-322d-4935-b071-11951634b610",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "medium",
+      "file": "src/requests/utils.py",
+      "module": "requests.utils",
+      "function": "super_len",
+      "line": 135,
+      "value": 18,
+      "message": "Medium complexity in function 'super_len'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "8debf609-44f8-4e35-a37d-395f2fba9b40",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/utils.py",
+      "module": "requests.utils",
+      "function": "get_netrc_auth",
+      "line": 206,
+      "value": 12,
+      "message": "Medium complexity in function 'get_netrc_auth'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "38340c29-c972-4b82-82b3-44a867cb0a9b",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "medium",
+      "file": "src/requests/utils.py",
+      "module": "requests.utils",
+      "function": "should_bypass_proxies",
+      "line": 752,
+      "value": 17,
+      "message": "Medium complexity in function 'should_bypass_proxies'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "ccb7337b-d736-48cf-9dfb-26360349a12d",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/utils.py",
+      "module": "requests.utils",
+      "function": "guess_json_utf",
+      "line": 944,
+      "value": 11,
+      "message": "Medium complexity in function 'guess_json_utf'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "fb045a69-fb6b-4faa-8dd5-0ddc8c2e535d",
+      "type": "complexity",
+      "category": "code_quality",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/__init__.py",
+      "module": "requests.__init__",
+      "function": "check_compatibility",
+      "line": 58,
+      "value": 10,
+      "message": "Medium complexity in function 'check_compatibility'",
+      "impact": "Moderate maintenance difficulty",
+      "tags": [
+        "maintainability"
+      ]
+    },
+    {
+      "id": "2239321d-e626-4fb4-8982-091000571869",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "high",
+      "effort": "medium",
+      "file": "src/requests/adapters.py",
+      "module": "requests.adapters",
+      "function": "send",
+      "line": 591,
+      "value": 107,
+      "message": "High length in function 'send' (107 lines)",
+      "impact": "Very long function, extremely hard to read and test",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    },
+    {
+      "id": "65bcf051-0829-42c4-8283-b329b03488f5",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "high",
+      "effort": "medium",
+      "file": "src/requests/auth.py",
+      "module": "requests.auth",
+      "function": "build_digest_header",
+      "line": 126,
+      "value": 109,
+      "message": "High length in function 'build_digest_header' (109 lines)",
+      "impact": "Very long function, extremely hard to read and test",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    },
+    {
+      "id": "eeac8625-14c3-4d58-99dd-fad61c1dd573",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/models.py",
+      "module": "requests.models",
+      "function": "_encode_files",
+      "line": 139,
+      "value": 67,
+      "message": "Medium length in function '_encode_files' (67 lines)",
+      "impact": "Long function, difficult to maintain",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    },
+    {
+      "id": "adbcffe1-991e-49c2-acf0-574438200397",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/models.py",
+      "module": "requests.models",
+      "function": "prepare_url",
+      "line": 411,
+      "value": 73,
+      "message": "Medium length in function 'prepare_url' (73 lines)",
+      "impact": "Long function, difficult to maintain",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    },
+    {
+      "id": "ac054429-cac3-4d0b-8fe7-97325ecf4b61",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "medium",
+      "effort": "medium",
+      "file": "src/requests/models.py",
+      "module": "requests.models",
+      "function": "prepare_body",
+      "line": 496,
+      "value": 77,
+      "message": "Medium length in function 'prepare_body' (77 lines)",
+      "impact": "Long function, difficult to maintain",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    },
+    {
+      "id": "4df15aef-28d2-4505-92af-07e570135070",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "high",
+      "effort": "medium",
+      "file": "src/requests/sessions.py",
+      "module": "requests.sessions",
+      "function": "resolve_redirects",
+      "line": 160,
+      "value": 122,
+      "message": "High length in function 'resolve_redirects' (122 lines)",
+      "impact": "Very long function, extremely hard to read and test",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    },
+    {
+      "id": "46a58807-4dd1-4a87-bf37-971faa1c68f9",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/sessions.py",
+      "module": "requests.sessions",
+      "function": "__init__",
+      "line": 391,
+      "value": 62,
+      "message": "Medium length in function '__init__' (62 lines)",
+      "impact": "Long function, difficult to maintain",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    },
+    {
+      "id": "1a4eef70-90f5-46aa-9714-0af61504259a",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "medium",
+      "effort": "medium",
+      "file": "src/requests/sessions.py",
+      "module": "requests.sessions",
+      "function": "request",
+      "line": 503,
+      "value": 92,
+      "message": "Medium length in function 'request' (92 lines)",
+      "impact": "Long function, difficult to maintain",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    },
+    {
+      "id": "48c1fb08-3524-4cf8-b630-a6c357aa8298",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "medium",
+      "effort": "medium",
+      "file": "src/requests/sessions.py",
+      "module": "requests.sessions",
+      "function": "send",
+      "line": 676,
+      "value": 76,
+      "message": "Medium length in function 'send' (76 lines)",
+      "impact": "Long function, difficult to maintain",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    },
+    {
+      "id": "4324f7df-0d21-4bf9-bdd8-0a972a0c6cce",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/utils.py",
+      "module": "requests.utils",
+      "function": "super_len",
+      "line": 135,
+      "value": 69,
+      "message": "Medium length in function 'super_len' (69 lines)",
+      "impact": "Long function, difficult to maintain",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    },
+    {
+      "id": "aeaf0fdb-f12d-4902-ada1-fdb542da8625",
+      "type": "long_function",
+      "category": "long_functions",
+      "severity": "medium",
+      "effort": "low",
+      "file": "src/requests/tests/test_lowlevel.py",
+      "module": "requests.tests.test_lowlevel",
+      "function": "test_digestauth_401_count_reset_on_redirect",
+      "line": 127,
+      "value": 63,
+      "message": "Medium length in function 'test_digestauth_401_count_reset_on_redirect' (63 lines)",
+      "impact": "Long function, difficult to maintain",
+      "tags": [
+        "maintainability",
+        "readability"
+      ]
+    }
+  ],
+  "summary": {
+    "total_issues": 27,
+    "high": 4,
+    "medium": 23,
+    "low": 0,
+    "debt_score": 70
+  },
+  "categories": {
+    "code_quality": 16,
+    "long_functions": 11
+  }
+}
